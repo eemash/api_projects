@@ -19,9 +19,9 @@ url_data_we_want="https://api.forecast.io/forecast/39ab5cf3f65c8a1ad56b02964b271
 raw_data = open(url_of_data_we_want).read
 parsed_data = JSON.parse(raw_data)
 
-the_temperature=parsed_data["results"][0]["currently"]["temperature"]
-the_hour_outlook=parsed_data["results"][0]["hourly"]["summary"]
-the_day_outlook=parsed_data["results"][0]["daily"]["summary"]
+the_temperature=parsed_data["currently"]["temperature"]
+the_hour_outlook=parsed_data["hourly"]["summary"]
+the_day_outlook=parsed_data["daily"]["summary"]
 
 # Your code goes below. Use the same approach as you did in
 #   address_to_coords.rb to read from a remote API and parse
